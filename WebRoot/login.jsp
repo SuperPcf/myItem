@@ -183,6 +183,7 @@ a {
 			<DIV class="initial_left_hand" id="left_hand"></DIV>
 			<DIV class="initial_right_hand" id="right_hand"></DIV>
 		</DIV>
+<<<<<<< HEAD
 	
 		<form action="LoginDo" method="post">
 		<P style="padding: 30px 0px 10px; position: relative;">
@@ -191,6 +192,15 @@ a {
 		</P>
 		<P style="position: relative;">
 			<SPAN class="p_logo"></SPAN> <INPUT class="ipt" name="password"
+=======
+		<form action="LoginDo" method="post">
+		<P style="padding: 30px 0px 10px; position: relative;">
+			<SPAN class="u_logo"></SPAN> <INPUT class="ipt" id="userId"
+			type="text" placeholder="请输入学号" value="${user.getUserId}">
+		</P>
+		<P style="position: relative;">
+			<SPAN class="p_logo"></SPAN> <INPUT class="ipt" id="password"
+>>>>>>> 080e76ffe6efb5f3bfaf3d5a4918b12db7b56d30
 				type="password" placeholder="请输入密码" value="${user.getUserKey}">
 		</P>
 		<DIV style="height: 50px; line-height: 50px; margin-top: 30px; border-top-color: rgb(231, 231, 231); border-top-width: 1px; border-top-style: solid;">

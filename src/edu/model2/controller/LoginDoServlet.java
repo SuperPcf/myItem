@@ -91,9 +91,13 @@ public class LoginDoServlet extends HttpServlet {
 			request.getRequestDispatcher("login.jsp").forward(request,
 					response);
 		} else {
+<<<<<<< HEAD
 			request.setAttribute("user", user);
 			request.getRequestDispatcher("index.jsp").forward(request,
 					response);
+=======
+			response.sendRedirect("index.jsp");
+>>>>>>> 080e76ffe6efb5f3bfaf3d5a4918b12db7b56d30
 		}
 
 		
