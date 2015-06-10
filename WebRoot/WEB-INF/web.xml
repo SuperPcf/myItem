@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <servlet>
+    <servlet-name>ClazzAddServlet</servlet-name>
+    <servlet-class>edu.model2.controller.ClazzAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ClazzAddDoServlet</servlet-name>
+    <servlet-class>edu.model2.controller.ClazzAddDoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ClazzListServlet</servlet-name>
+    <servlet-class>edu.model2.controller.ClazzListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UserRegServlet</servlet-name>
+    <servlet-class>edu.model2.controller.UserRegServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UserDelServlet</servlet-name>
+    <servlet-class>edu.model2.controller.UserDelServlet</servlet-class>
+  </servlet>
+  
+
+  <servlet>
+     <servlet-name>ClazzDelDoServlet</servlet-name>
+    <servlet-class>edu.model2.controller.ClazzDelDoServlet</servlet-class>
+  </servlet>
+  <servlet>
+   <servlet-name>ClazzEditDoSevrlet</servlet-name>
+    <servlet-class>edu.model2.controller.ClazzEditDoSevrlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UserDelDoServlet</servlet-name>
+    <servlet-class>edu.model2.controller.UserDelDoServlet</servlet-class>
+  </servlet>
+  <servlet>
+   <servlet-name>UserAddDoServlet</servlet-name>
+    <servlet-class>edu.model2.controller.UserAddDoServlet</servlet-class>
+  </servlet>
+  <servlet>
+     <servlet-name>UserUpdateDoServlet</servlet-name>
+    <servlet-class>edu.model2.controller.UserUpdateDoServlet</servlet-class>
+  </servlet>
+  <servlet>
+   <servlet-name>UserListServlet</servlet-name>
+    <servlet-class>edu.model2.controller.UserListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AttendanceAddDoServlet</servlet-name>
+    <servlet-class>edu.model2.controller.AttendanceAddDoServlet</servlet-class>
+  </servlet>
+  <servlet>
+   <servlet-name>AttendanceDelDoServlet</servlet-name>
+    <servlet-class>edu.model2.controller.AttendanceDelDoServlet</servlet-class>
+  </servlet>
+  <servlet>
+   <servlet-name>AttendanceUPdateDoServlet</servlet-name>
+    <servlet-class>edu.model2.controller.AttendanceUPdateDoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AttendanceListServlet</servlet-name>
+    <servlet-class>edu.model2.controller.AttendanceListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ClazzDeleteServlet</servlet-name>
+    <servlet-class>edu.model2.controller.ClazzDeleteServlet</servlet-class>
+  </servlet>
+  <servlet>
+   
+    <servlet-name>ClazzEditServlet</servlet-name>
+    <servlet-class>edu.model2.controller.ClazzEditServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginDoServlet</servlet-name>
+    <servlet-class>edu.model2.controller.LoginDoServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+<!-- /*********************************************************************/ -->
+
+
+
+  <servlet-mapping>
+    <servlet-name>ClazzAddServlet</servlet-name>
+    <url-pattern>/ClazzAdd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ClazzAddDoServlet</servlet-name>
+    <url-pattern>/ClazzAddDo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ClazzListServlet</servlet-name>
+    <url-pattern>/ClazzList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserRegServlet</servlet-name>
+    <url-pattern>/UserReg</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserDelServlet</servlet-name>
+    <url-pattern>/UserDel</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>ClazzDelDoServlet</servlet-name>
+    <url-pattern>/ClazzDelDo</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet-mapping>
+    <servlet-name>UserDelDoServlet</servlet-name>
+    <url-pattern>/UserDelDo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserAddDoServlet</servlet-name>
+    <url-pattern>/UserAddDo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserUpdateDoServlet</servlet-name>
+    <url-pattern>/UserUpdateDo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserListServlet</servlet-name>
+    <url-pattern>/UserList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AttendanceAddDoServlet</servlet-name>
+    <url-pattern>/AttendanceAddDo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AttendanceDelDoServlet</servlet-name>
+    <url-pattern>/AttendanceDelDo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AttendanceUPdateDoServlet</servlet-name>
+    <url-pattern>/AttendanceUPdateDo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AttendanceListServlet</servlet-name>
+    <url-pattern>/AttendanceList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ClazzDeleteServlet</servlet-name>
+    <url-pattern>/ClazzDelete</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>ClazzEditDoSevrlet</servlet-name>
+    <url-pattern>/ClazzEditDo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ClazzEditServlet</servlet-name>
+    <url-pattern>/ClazzEdit</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginDoServlet</servlet-name>
+    <url-pattern>/LoginDo</url-pattern>
+  </servlet-mapping>
+  
+  <!--*****************控制乱码过滤器**************************  -->
+<!--  
+<filter> 
+    <filter-name>CharacterEncodingFilter</filter-name> 
+    <filter-class>com.worthtech.app.filter.CharacterEncodingFilter</filter-class> 
+    <init-param> 
+      <param-name>encoding</param-name> 
+      <param-value>UTF-8</param-value> 
+    </init-param> 
+    <init-param> 
+      <param-name>ignore</param-name> 
+      <param-value>true</param-value> 
+    </init-param> 
+  </filter> 
+  <filter-mapping> 
+    <filter-name>CharacterEncodingFilter</filter-name> 
+    <url-pattern>/*</url-pattern> 
+  </filter-mapping> 
+-->  
+<filter> 
+    <filter-name>IPFilter</filter-name> 
+    <filter-class>edu.model2.filter.IPFilter</filter-class> 
+   
+    <init-param> 
+      <param-name>ip</param-name> 
+      <param-value>171.34.69.139</param-value> 
+    </init-param> 
+    
+  </filter> 
+  <filter-mapping> 
+    <filter-name>IPFilter</filter-name> 
+    <url-pattern>/*</url-pattern> 
+  </filter-mapping>
+
+</web-app>
