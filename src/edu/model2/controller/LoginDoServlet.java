@@ -7,9 +7,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import edu.model2.bean.Clazz;
-import edu.model2.bean.ClazzDao;
 import edu.model2.bean.User;
 import edu.model2.bean.UserDao;
 
@@ -78,7 +77,9 @@ public class LoginDoServlet extends HttpServlet {
 			if(dao.idExist(user.getUserId())){
 				res = dao.loginDo(user.getUserId(), user.getUserKey());
 			
+				
 			}
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -86,18 +87,28 @@ public class LoginDoServlet extends HttpServlet {
 		
 
 		if (!res) {
-			request.setAttribute("errMsg", "User");
+			
+			request.setAttribute("errMsg", " 学号或密码错误!请再试一次！");
 			request.setAttribute("user", user);
+			
 			request.getRequestDispatcher("login.jsp").forward(request,
 					response);
+			
 		} else {
-<<<<<<< HEAD
+			
+			user=dao.findUserById(user.getUserId());
+			
+			HttpSession session=request.getSession();
+			
+			session.setAttribute("userName",
+					user.getUserName());
+			
+			String userName=(String) session.getAttribute("userName");
+
 			request.setAttribute("user", user);
 			request.getRequestDispatcher("index.jsp").forward(request,
 					response);
-=======
-			response.sendRedirect("index.jsp");
->>>>>>> 080e76ffe6efb5f3bfaf3d5a4918b12db7b56d30
+
 		}
 
 		

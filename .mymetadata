@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-module
   type="WEB"
-  name="pcf1303AttendM2"
+  name="myItem"
   id="myeclipse.1428981100404"
-  context-root="/pcf1303AttendM2"
+  context-root="/myItem"
   j2ee-spec="5.0"
   archive="pcf1303AttendM2.war">
   <attributes>

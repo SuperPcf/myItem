@@ -193,29 +193,26 @@ public class UserDao {
 		Connection conn = dbCon.getConnection(); //
 		String updateSQL = "select userKey from User where userID = ?";
 		PreparedStatement pstmt = null; //
-<<<<<<< HEAD
+
 		//User user = new User();
-=======
+
 		User user = new User();
->>>>>>> 080e76ffe6efb5f3bfaf3d5a4918b12db7b56d30
+
 		
 			try {
 				pstmt = conn.prepareStatement(updateSQL);
 				pstmt.setInt(1, userId); //
 				ResultSet rs = pstmt.executeQuery(); //
-<<<<<<< HEAD
+
 				
-				if (rs.next()) {
-					
-					flase=	password.equals(rs.getString(1));
-					//System.out.print("----->>>"+flase);
-=======
+			
+
 
 				if (rs.next()) {
 					
-					flase=	password.equals(rs.getString(4));
+					flase=	password.equals(rs.getString(1));
 					
->>>>>>> 080e76ffe6efb5f3bfaf3d5a4918b12db7b56d30
+
 					
 				}
 				

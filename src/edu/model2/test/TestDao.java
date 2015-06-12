@@ -104,13 +104,12 @@ public class TestDao {
 		ClazzDao dao = new ClazzDao();
 		dao.updateClazz(clazz);
 	}
-<<<<<<< HEAD
+
 	@Test
 	public void testLoginDo(){
 		UserDao dao=new UserDao();
 		boolean i=dao.loginDo(1,"123");
 		System.out.print("------>>>"+i);
 	}
-=======
->>>>>>> 080e76ffe6efb5f3bfaf3d5a4918b12db7b56d30
+
 }

@@ -24,9 +24,9 @@
 
 </head>
 
-<body>
-	This is my JSP page. Test Ip.
-	<br>
+<body><div align="right"> 
+	This is my JSP page. Test Ip. 
+	<br></div>
 	<iframe src="http://whois.pconline.com.cn/ipJson.jsp" width="20%"
 		height="50%"> 脚本之家使用了框架技术，但是您的浏览器不支持框架，请升级您的浏览器以便正常访问脚本之家。 </iframe>
 <%out.print(IPFilter.getIpAddr((HttpServletRequest)request));%>
