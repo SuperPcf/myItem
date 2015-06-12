@@ -176,6 +176,7 @@ a {
 </HEAD>
 <BODY>
 	<DIV class="top_div"></DIV>
+	
 	<DIV
 		style="background: rgb(255, 255, 255); margin: -100px auto auto; border: 1px solid rgb(231, 231, 231); border-image: none; width: 400px; height: 200px; text-align: center;">
 		<DIV style="width: 165px; height: 96px; position: absolute;">
@@ -183,26 +184,19 @@ a {
 			<DIV class="initial_left_hand" id="left_hand"></DIV>
 			<DIV class="initial_right_hand" id="right_hand"></DIV>
 		</DIV>
-<<<<<<< HEAD
+
 	
 		<form action="LoginDo" method="post">
 		<P style="padding: 30px 0px 10px; position: relative;">
 			<SPAN class="u_logo"></SPAN> <INPUT class="ipt" name="userId"
-			type="text" placeholder="请输入学号" value="${user.getUserId}">
+			type="text" placeholder="请输入学号" value="${user.userId}">
 		</P>
 		<P style="position: relative;">
 			<SPAN class="p_logo"></SPAN> <INPUT class="ipt" name="password"
-=======
-		<form action="LoginDo" method="post">
-		<P style="padding: 30px 0px 10px; position: relative;">
-			<SPAN class="u_logo"></SPAN> <INPUT class="ipt" id="userId"
-			type="text" placeholder="请输入学号" value="${user.getUserId}">
+
+				type="password" placeholder="请输入密码" value="">
 		</P>
-		<P style="position: relative;">
-			<SPAN class="p_logo"></SPAN> <INPUT class="ipt" id="password"
->>>>>>> 080e76ffe6efb5f3bfaf3d5a4918b12db7b56d30
-				type="password" placeholder="请输入密码" value="${user.getUserKey}">
-		</P>
+		
 		<DIV style="height: 50px; line-height: 50px; margin-top: 30px; border-top-color: rgb(231, 231, 231); border-top-width: 1px; border-top-style: solid;">
 			<P style="margin: 0px 35px 20px 45px;">
 				<SPAN style="float: left;">

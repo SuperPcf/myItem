@@ -1,4 +1,5 @@
-<%@page language="java" contentType="text/html;charset=utf-8"  pageEncoding="utf-8"%>
+<%@page language="java" import="java.util.*,java.lang.*"
+	contentType="text/html;charset=utf-8" pageEncoding="utf-8"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -80,44 +81,68 @@ html{ padding:90px 10px;}
 
 	<div class="top"
 		style="background-image: url('images/南航.jpg');background-size:contain;">
-		<center>
-			<font size="7" color="blue"><b>江西微软技术中心实训考勤系统</b></font>
-		</center>
+
+		<div>
+			<center>
+				<font size="6" color="blue"><b>江西微软技术中心实训考勤系统</b>
+				</font>
+			</center>
+		</div>
+		<div id="top_bottom_left">
+			<%="当前时间为：" + new Date().toLocaleString()
+					+ "&nbsp&nbsp&nbsp"%>
+			<font size="2" color="#00f">欢迎您！${sessionScope.userName} </font>
+		</div>
+
+
 	</div>
 	<div class="left">
 
-		<ul class="left_ul">
-			<li>班级信息管理
-				<ul>
-					<li><a href="ClazzList"> 查看班级信息</a></li>
-					<li><a href="ClazzAdd.jsp"> 添加班级信息</a></li>
-					
-				</ul>
-			</li>
-			<li>学生信息管理
-				<ul>
-					<li><a href="#"> 查看学生信息</a></li>
-					<li><a href="#"> 添加学生信息</a></li>
-					
-				</ul>
-			</li>
-			<li>考勤管理
-				<ul>
-					<li><a href="#">查看考勤信息</a></li>
-					<li><a href="#"> 添加考勤信息</a></li>
-					
-				</ul>
-			</li>
+		<div>
+			<ul class="left_ul">
+				<li>班级信息管理
+					<ul>
+						<li><a href="ClazzList"> 查看班级信息</a>
+						</li>
+						<li><a href="ClazzAdd.jsp"> 添加班级信息</a>
+						</li>
 
-		</ul>
+					</ul></li>
+				<li>学生信息管理
+					<ul>
+						<li><a href="#"> 查看学生信息</a>
+						</li>
+						<li><a href="#"> 添加学生信息</a>
+						</li>
+
+					</ul></li>
+				<li>考勤管理
+					<ul>
+						<li><a href="#">查看考勤信息</a>
+						</li>
+						<li><a href="#"> 添加考勤信息</a>
+						</li>
+
+					</ul></li>
+
+			</ul>
 
 
-
+		</div>
+		<hr>
+		<div>
+		<center>
+		<input type="button" name="" value="签到">
+		<input type="button" name="" value="签退">
+		</center>
+		
+		</div>
 
 	</div>
+
 	<div class="right"
 		style="background-image: url('images/long.jpg');background-size:contain;">
-		
+
 
 	</div>
 
