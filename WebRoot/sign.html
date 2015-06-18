@@ -1,69 +1,69 @@
-﻿<!doctype html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta charset="utf-8">
-<title>js多皮肤网页日期控件 - 网站源码</title>
-<script src="laydate/laydate.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>包含节假日特殊日期的日历插件</title>
 <style>
-*{margin:0;padding:0;list-style:none;}
-html{background-color:#E3E3E3; font-size:14px; color:#000; font-family:'微软雅黑'}
-h2{line-height:30px; font-size:20px;}
-a,a:hover{ text-decoration:none;}
-pre{font-family:'微软雅黑'}
-.box{width:970px; padding:10px 20px; background-color:#fff; margin:10px auto;}
-.box a{padding-right:20px;}
-.demo1,.demo2,.demo3,.demo4,.demo5,.demo6{margin:25px 0;}
-h3{margin:10px 0;}
-.layinput{height: 22px;line-height: 22px;width: 150px;margin: 0;}
+*{margin:0;padding:0;list-style:none;border:none;}
+body{background:#fff;}
+.content{border:3px solid #ddd;width:405px;margin:100px auto;}
+.datetable{border-top:1px solid #ccc;border-left:1px solid #ccc;background:#fff;}
+.datetable td{border-bottom:1px solid #ccc;border-right:1px solid #ccc;text-align:center;}
+.datetable thead{background:#006600;}
+.datetable thead td{padding:10px 5px;font:normal 12px/normal 'microsoft yahei';color:#fff;text-align:center;}
+.datetable thead td span{padding:0 5px;}
+.datetable tbody td{padding:5px 3px;font-size:12px;}
 </style>
 </head>
-<body>
-
-<div class="box">
-
-
-
-<div class="demo2">
-<h3>演示一（日期精确到秒）</h3>
-<input placeholder="请输入日期" class="laydate-icon" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
-</div>
-
-
-
-</div>
-<script>
-!function(){
-laydate.skin('molv');//切换皮肤，请查看skins下面皮肤库
-laydate({elem: '#demo'});//绑定元素
-}();
-//日期范围限制
-var start = {
-    elem: '#start',
-    format: 'YYYY-MM-DD',
-    min: laydate.now(), //设定最小日期为当前日期
-    max: '2099-06-16', //最大日期
-    istime: true,
-    istoday: false,
-    choose: function(datas){
-         end.min = datas; //开始日选好后，重置结束日的最小日期
-         end.start = datas //将结束日的初始值设定为开始日
+<body onload="initial();">
+<!--代码部分begin-->
+<form name="CLD" class="content">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="datetable">
+    <thead>
+    <tr>
+      <td colSpan=7><span>公历</span>
+        <select name="SY" onchange="changeCld();" style="font-SIZE: 9pt">
+        <script>
+            for(i=1900;i<2050;i++) document.write('<option>'+i);
+        </script>
+         </select><span>年</span>
+         <select name="SM" onchange="changeCld();" style="font-SIZE: 9pt">
+        <script>
+            for(i=1;i<13;i++) document.write('<option>'+i);
+        </script>
+        </select><span>月</span>
+        </font><span id="GZ"></span>
+      </td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr style="background:#eee;">
+      <td width="54">日</td>
+      <td width="54">一</td>
+      <td width="54">二</td>
+      <td width="54">三</td>
+      <td width="54">四</td>
+      <td width="54">五</td>
+      <td width="54">六</td>
+    </tr>            
+    <script>
+    var gNum;
+    for(i=0;i<6;i++) {
+       document.write('<tr align="center">');
+       for(j=0;j<7;j++) {
+          gNum = i*7+j;
+          document.write('<td id="GD' + gNum +'"><font id="SD' + gNum +'" size=2 face="Arial Black"');
+          if(j == 0) document.write('color="red"');
+          if(j == 6) document.write('color="#000080"');
+          document.write('></font><br/><font id="LD' + gNum + '" size=2 style="font-size:9pt"></font></td>');
+       }
+       document.write('</tr>');
     }
-};
-var end = {
-    elem: '#end',
-    format: 'YYYY-MM-DD',
-    min: laydate.now(),
-    max: '2099-06-16',
-    istime: true,
-    istoday: false,
-    choose: function(datas){
-        start.max = datas; //结束日选好后，充值开始日的最大日期
-    }
-};
-laydate(start);
-laydate(end);
-
-</script>
-</div>
+   </script>
+   </tbody>
+</table>
+</form>
+<script src="js/lanrenzhijia.js"></script>
+<!--代码部分end-->
 </body>
-</html>
+</HTML>
