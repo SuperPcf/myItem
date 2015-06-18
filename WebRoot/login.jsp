@@ -178,13 +178,7 @@ a {
 </HEAD>
 <BODY>
 	<DIV class="top_div"></DIV>
-<<<<<<< HEAD
 
-
-
-=======
-	
->>>>>>> 926a90e2fd33883f8411410a68c62f86528ef5c1
 	<DIV
 		style="background: rgb(255, 255, 255); margin: -100px auto auto; border: 1px solid rgb(231, 231, 231); border-image: none; width: 400px; height: 200px; text-align: center;">
 		<DIV style="width: 165px; height: 96px; position: absolute;">
@@ -193,13 +187,9 @@ a {
 			<DIV class="initial_right_hand" id="right_hand"></DIV>
 		</DIV>
 
-<<<<<<< HEAD
 
-		<form action="LoginDo" method="post">
-			<P style="padding: 30px 0px 10px; position: relative;">
-				<SPAN class="u_logo"></SPAN> <INPUT class="ipt" name="userId"
-					type="text" placeholder="请输入学号" value="${user.userId}">
-=======
+
+
 	
 		<form action="LoginDo" method="post">
 		<P style="padding: 30px 0px 10px; position: relative;">
@@ -220,7 +210,7 @@ a {
 				<A style="color: rgb(204, 204, 204); margin-right: 10px;" href="#">注册</A>
 				<input type="submit" name="submit" value="登录"  style="background: rgb(0, 142, 173); padding: 7px 10px; border-radius: 4px; border: 1px solid rgb(26, 117, 152); border-image: none; color: rgb(255, 255, 255); font-weight: bold;"/>
 				 </SPAN>
->>>>>>> 926a90e2fd33883f8411410a68c62f86528ef5c1
+
 			</P>
 			<P style="position: relative;">
 				<SPAN class="p_logo"></SPAN> <INPUT class="ipt" name="password"
