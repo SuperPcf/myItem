@@ -102,11 +102,13 @@ public class LoginDoServlet extends HttpServlet {
 			
 			session.setAttribute("userName",
 					user.getUserName());
+			String userId=request.getParameter("userId");
+			session.setAttribute("userId", userId);
 			
 			String userName=(String) session.getAttribute("userName");
 
 			request.setAttribute("user", user);
-			request.getRequestDispatcher("index.jsp").forward(request,
+			request.getRequestDispatcher("sign.jsp").forward(request,
 					response);
 
 		}

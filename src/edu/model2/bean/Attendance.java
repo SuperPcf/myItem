@@ -4,8 +4,8 @@ import java.sql.Date;
 
 public class Attendance {
 	private Integer attendanceID;
-	private Date inTime;
-	private Date outTime;
+	private String inTime;
+	private String outTime;
 	private Integer userId;
 	
 	public Integer getUserId() {
@@ -26,19 +26,19 @@ public class Attendance {
 		this.attendanceID = attendanceID;
 	}
 
-	public Date getInTime() {
+	public String getInTime() {
 		return inTime;
 	}
 
-	public void setInTime(Date inTime) {
+	public void setInTime(String inTime) {
 		this.inTime = inTime;
 	}
 
-	public Date getOutTime() {
+	public String getOutTime() {
 		return outTime;
 	}
 
-	public void setOutTime(Date outTime) {
+	public void setOutTime(String outTime) {
 		this.outTime = outTime;
 	}
 
