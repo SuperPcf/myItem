@@ -1,4 +1,5 @@
-<%@page language="java" contentType="text/html;charset=utf-8"  pageEncoding="utf-8"%>
+<%@page language="java" import="java.util.*,java.lang.*"
+	contentType="text/html;charset=utf-8" pageEncoding="utf-8"%>
 <html>
 <head>
 
@@ -41,10 +42,10 @@ body {
 	right: 10px;
 	top: 90px;
 	bottom: 90px;
-/* 	overflow:scroll; /*任何时候都强制显示滚动条*/ */
-	overflow:auto; /*需要的时候会出现滚动条*/
-	overflow-x:auto; /*控制X方向的滚动条*/
-	overflow-y:auto; 
+	/* 	overflow:scroll; /*任何时候都强制显示滚动条*/ */
+	overflow: auto; /*需要的时候会出现滚动条*/
+	overflow-x: auto; /*控制X方向的滚动条*/
+	overflow-y: auto;
 }
 
 .bottom {
@@ -82,35 +83,48 @@ html{ padding:90px 10px;}
 <body>
 
 	<div class="top"
-		>
-		<center>
-			<font size="7" color="blue"><b>江西微软技术中心实训考勤系统</b></font>
-		</center>
+		style="background-image: url('images/南航.jpg');background-size:contain;">
+
+		<div>
+			<center>
+				<font size="6" color="blue"><b>江西微软技术中心实训考勤系统</b> </font>
+			</center>
+		</div>
+		<div id="top_bottom_left">
+			<%="当前时间为：" + new Date().toLocaleString()
+					+ "&nbsp&nbsp&nbsp"%>
+			<font size="2" color="#00f">欢迎您！${sessionScope.userName} </font>
+		</div>
+
+
 	</div>
 	<div class="left">
 
 		<ul class="left_ul">
 			<li>班级信息管理
 				<ul>
-					<li><a href="ClazzList"> 查看班级信息</a></li>
-					<li><a href="ClazzAdd.jsp"> 添加班级信息</a></li>
-					
-				</ul>
-			</li>
+					<li><a href="ClazzList"> 查看班级信息</a>
+					</li>
+					<li><a href="ClazzAdd.jsp"> 添加班级信息</a>
+					</li>
+
+				</ul></li>
 			<li>学生信息管理
 				<ul>
-					<li><a href="#"> 查看学生信息</a></li>
-					<li><a href="#"> 添加学生信息</a></li>
-					
-				</ul>
-			</li>
+					<li><a href="#"> 查看学生信息</a>
+					</li>
+					<li><a href="#"> 添加学生信息</a>
+					</li>
+
+				</ul></li>
 			<li>考勤管理
 				<ul>
-					<li><a href="#">查看考勤信息</a></li>
-					<li><a href="#"> 添加考勤信息</a></li>
-					
-				</ul>
-			</li>
+					<li><a href="#">查看考勤信息</a>
+					</li>
+					<li><a href="#"> 添加考勤信息</a>
+					</li>
+
+				</ul></li>
 
 		</ul>
 
@@ -120,5 +134,4 @@ html{ padding:90px 10px;}
 	</div>
 	<div class="right"
 		style="background-image: url('images/top.png');background-size:contain;">
-	<center>
-	
+		<center>

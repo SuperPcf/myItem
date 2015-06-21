@@ -1,24 +1,19 @@
 package edu.model2.controller;
 
 import java.io.IOException;
-import java.util.Date;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import edu.model2.bean.Attendance;
-import edu.model2.bean.AttendanceDao;
-import edu.model2.bean.ClazzDao;
-
-public class AttendanceAddDoServlet extends HttpServlet {
+public class SignDoServlet extends HttpServlet {
 
 	/**
 	 * Constructor of the object.
 	 */
-	public AttendanceAddDoServlet() {
+	public SignDoServlet() {
 		super();
 	}
 
@@ -60,32 +55,14 @@ public class AttendanceAddDoServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		response.setContentType("text/html");
-		request.setCharacterEncoding("utf-8");
-
-		Attendance at = new Attendance();
-		AttendanceDao dao = new AttendanceDao();
-
-		HttpSession hs=request.getSession();
-		Integer userId=Integer.parseInt((String)hs.getAttribute("useId"));
-		at.setUserId(userId);
-		at.setInTime(new Date().toLocaleString());
-//		Integer.parseInt(request.getSession().getAttribute("userId"));
-//		at.setUserId(Integer.parseInt(request.getSession().getAttribute("userId")));
-//		at.setClazzName(request.getParameter("clazzName"));
-//		at.setClazzCode(request.getParameter("clazzCode"));
-
-		int res;
-		
-		//拿不到值返回0
-		res = dao.addAttendance(at);
-
-		if (res == 0) {
-			request.setAttribute("errMsg", "签到失败");
-			request.setAttribute("at", at);
-			request.getRequestDispatcher("sign.jsp").forward(request,
-					response);
-		} else {
+		PrintWriter out = response.getWriter();
+		if(request.getParameter("skip")!=null){
 			response.sendRedirect("index.jsp");
+		}
+		if(request.getParameter("signIn")!=null){
+			request.getRequestDispatcher("AttendanceAddDo").forward(request,
+					response);
+			
 		}
 	}
 

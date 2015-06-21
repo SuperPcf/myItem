@@ -81,6 +81,13 @@
     <servlet-name>LoginDoServlet</servlet-name>
     <servlet-class>edu.model2.controller.LoginDoServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SignDoServlet</servlet-name>
+    <servlet-class>edu.model2.controller.SignDoServlet</servlet-class>
+  </servlet>
+
 
 
 
@@ -163,6 +170,10 @@
   <servlet-mapping>
     <servlet-name>LoginDoServlet</servlet-name>
     <url-pattern>/LoginDo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SignDoServlet</servlet-name>
+    <url-pattern>/SignDo</url-pattern>
   </servlet-mapping>
   
   <!--*****************控制乱码过滤器**************************  -->
